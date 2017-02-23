@@ -1,6 +1,6 @@
 body {
     padding-top: 70px;
-    background-color: #D3D3D3;
+    background-color: #88D498;
 }
 
 .hero-spacer {
@@ -16,19 +16,19 @@ footer {
 }
 
 .navbar {
-  background-color: #1E3888;
+  background-color: #EDD892;
 }
 
 #navfont {
   font-family: 'Comfortaa', cursive;
-  color: #EFF6EE;
+  color: #114B5F;
   letter-spacing: 0.0625em;
-  font-weight: 300;
+  font-weight: 700;
 }
 
 #headerBlock {
   font-family: 'Comfortaa', cursive;
-  background-color: #587291;
+  background-color: #1A936F;
   border-radius: 10px;
   color: white;
   letter-spacing: 0.0825em;

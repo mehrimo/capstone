@@ -1,6 +1,6 @@
 (function(){
   'use strict';
-
+console.log("camera-script");
   var setEventListeners = function(uploadBox) {
     var previewContainer = uploadBox.querySelectorAll('.jst-preview')[0];
     var fileInputs = uploadBox.querySelectorAll('[type="file"]');

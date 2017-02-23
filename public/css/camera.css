@@ -87,7 +87,7 @@ form:after {
 }
 
 body {
-  background: #37474f;
+  background: #88D498;
   color: #fff;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
@@ -98,7 +98,7 @@ body {
 }
 
 .l-constrained {
-  max-width: 1000px;
+  max-width: 500px;
   margin: 0 auto;
   padding: 0 24px;
 }
