@@ -1,0 +1,20 @@
+{
+  "name": "capstone",
+  "version": "1.0.0",
+  "description": "# Proposal",
+  "main": "knex.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mehrimo/capstone.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mehrimo/capstone/issues"
+  },
+  "homepage": "https://github.com/mehrimo/capstone#readme"
+}

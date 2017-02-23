@@ -1,0 +1,73 @@
+<h4>Hello from Home template</h4>
+
+<!-- CAMERA START -->
+<header>
+  <div class="l-constrained">
+    <h1>HTML5 Mobile Device Camera Access</h1>
+
+    A modular and simple way to enable photo upload on mobile and larger devices.
+  </div>
+</header>
+
+<div class="l-constrained">
+  <div class="m-box">
+    <form action="" method="POST" enctype="multipart/form-data">
+      <div class="m-upload js-fileupload">
+        <div class="m-upload__preview jst-preview">
+          <div>
+            <i class="mdi mdi-cloud-upload"></i>
+          </div>
+        </div>
+
+        <div class="m-upload__inputs">
+          <div class="m-upload__file">
+            <input type="file" accept="image/*" name="ul[0][pick]" id="ul-button-1">
+
+            <label for="ul-button-1">
+              <i class="mdi mdi-image"></i>
+              <span>Pick photo</span>
+            </label>
+          </div>
+
+          <div class="m-upload__file">
+            <input type="file" accept="image/*" capture="camera" name="ul[0][camera]" id="ul-button-2">
+
+            <label for="ul-button-2">
+              <i class="mdi mdi-camera"></i>
+              <span>Take new photo</span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="m-upload js-fileupload">
+        <div class="m-upload__preview jst-preview">
+          <div>
+            <i class="mdi mdi-cloud-upload"></i>
+          </div>
+        </div>
+
+        <div class="m-upload__inputs">
+          <div class="m-upload__file">
+            <input type="file" accept="image/*" name="ul[1][pick]" id="ul-button-3">
+
+            <label for="ul-button-3">
+              <i class="mdi mdi-image"></i>
+              <span>Pick photo</span>
+            </label>
+          </div>
+
+          <div class="m-upload__file">
+            <input type="file" accept="image/*" capture="camera" name="ul[1][camera]" id="ul-button-4">
+
+            <label for="ul-button-4">
+              <i class="mdi mdi-camera"></i>
+              <span>Take new photo</span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<!-- CAMERA STOP -->
