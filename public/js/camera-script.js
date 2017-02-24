@@ -1,35 +1,58 @@
-(function(){
-  'use strict';
-console.log("camera-script");
-  var setEventListeners = function(uploadBox) {
-    var previewContainer = uploadBox.querySelectorAll('.jst-preview')[0];
-    var fileInputs = uploadBox.querySelectorAll('[type="file"]');
+function previewFile(){
+       var preview = document.querySelector('img'); //selects the query named img
+       var file    = document.querySelector('input[type=file]').files[0]; //sames as here
+       var reader  = new FileReader();
 
-    var previewImage = function (event) {
-      var file = event.target.files[0];
-      var imageType = /image.*/;
+       reader.onloadend = function () {
+           preview.src = reader.result;
+       }
 
-      if(typeof FileReader !== 'undefined' && file.type.match(imageType)) {
-        var reader = new FileReader();
-
-        reader.onload = function() {
-          previewContainer.style.backgroundImage = 'url(' + reader.result + ')';
-        };
-
-        reader.readAsDataURL(file);
-      }
-    };
-
-    for(var k = 0; k < fileInputs.length; k++) {
-      fileInputs[k].addEventListener('change', previewImage);
-    }
-  };
-
-  var uploadBoxes = document.querySelectorAll('.js-fileupload');
-
-  for(var j = 0; j < uploadBoxes.length; j++) {
-    var uploadBox = uploadBoxes[j];
-
-    setEventListeners(uploadBox);
+       if (file) {
+           reader.readAsDataURL(file); //reads the data as a URL
+       } else {
+           preview.src = "";
+       }
   }
-}());
+
+
+
+
+
+
+// (function(){
+//   'use strict';
+//   var setEventListeners = function(uploadBox) {
+//     var previewContainer = uploadBox.querySelectorAll('.jst-preview')[0];
+//     var fileInputs = uploadBox.querySelectorAll('[type="file"]');
+//
+//     var previewImage = function (event) {
+//       var file = event.target.files[0];
+//       var imageType = /image.*/;
+//
+//       if(typeof FileReader !== 'undefined' && file.type.match(imageType)) {
+//         var reader = new FileReader();
+//
+//         reader.onload = function() {
+//           previewContainer.style.backgroundImage = 'url(' + reader.result + ')';
+//         };
+//
+//         reader.readAsDataURL(file);
+//       }
+//     };
+//
+//     for(var k = 0; k < fileInputs.length; k++) {
+//       fileInputs[k].addEventListener('change', previewImage);
+//     }
+//   };
+//
+//   var uploadBoxes = document.querySelectorAll('.js-fileupload');
+//
+//   for(var j = 0; j < uploadBoxes.length; j++) {
+//     var uploadBox = uploadBoxes[j];
+//
+//     setEventListeners(uploadBox);
+//   }
+//
+//   console.log("camera-script");
+//
+// }());
