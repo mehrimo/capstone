@@ -1,9 +1,15 @@
 <h4>Hello from Home template</h4>
 
-<!-- Image preview Start -->
+<!-- Image upload Start -->
 <input type="file" onchange="previewFile()"><br>
 <img src="" height="200" alt="Image preview...">
-<!-- Image preview Stop -->
+
+<h3>A demonstration of how to access a File Upload Button</h3>
+
+<input type="file" id="myFile">
+
+<button id="submitBtn">Submit</button>
+
 
 
 
@@ -13,18 +19,18 @@
     <form action="" method="POST" enctype="multipart/form-data">
       <div class="m-upload js-fileupload">
         <div class="m-upload__preview jst-preview">
-          <div> -->
-        <!-- <i class="material-icons">cloud_upload</i>   -->
-      <!-- </div> -->
-        <!-- </div>
+          <div>
+         <i class="material-icons">cloud_upload</i>
+      </div>
+         </div>
 
         <div class="m-upload__inputs">
           <div class="m-upload__file">
             <input type="file" accept="image/*" name="ul[0][pick]" id="ul-button-1">
 
-            <label for="ul-button-1"> -->
-          <!-- <i class="material-icons">insert_photo</i>   -->
-          <!-- <span>Pick photo</span>
+            <label for="ul-button-1">
+          <i class="material-icons">insert_photo</i>
+           <span>Pick photo</span>
             </label>
           </div>
 
@@ -32,41 +38,14 @@
             <input type="file" accept="image/*" capture="camera" name="ul[0][camera]" id="ul-button-2">
 
             <label for="ul-button-2">
-              <i class="mdi mdi-camera"></i> -->
-              <!-- <i class="material-icons">photo_camera</i> -->
-              <!-- <span>Take new photo</span>
-            </label>
-          </div>
-        </div>
-      </div> -->
-
-      <!-- <div class="m-upload js-fileupload">
-        <div class="m-upload__preview jst-preview">
-          <div>
-            <i class="mdi mdi-cloud-upload"></i>
-          </div>
-        </div> -->
-
-        <!-- <div class="m-upload__inputs">
-          <div class="m-upload__file">
-            <input type="file" accept="image/*" name="ul[1][pick]" id="ul-button-3">
-
-            <label for="ul-button-3">
-              <i class="mdi mdi-image"></i>
-              <span>Pick photo</span>
-            </label>
-          </div>
-
-          <div class="m-upload__file">
-            <input type="file" accept="image/*" capture="camera" name="ul[1][camera]" id="ul-button-4">
-
-            <label for="ul-button-4">
               <i class="mdi mdi-camera"></i>
+              <i class="material-icons">photo_camera</i>
               <span>Take new photo</span>
             </label>
           </div>
-        </div> -->
-      <!-- </div>
+        </div>
+      </div>
+
     </form>
   </div>
 </div> -->

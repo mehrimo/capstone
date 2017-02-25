@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "flora-find",
+  "private_key_id": "f3476a584d945614d73155593f3dab58f2d0e287",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDB8Qjw60k4BU3Y\nbC6+z7IWb99Z1ufwq3Pd9HlCQlRyPynsVNXc8wJb+9lFzA7bLqoNU/iJ3QxA49+B\ndwCBRDn4SVIfABkHSrkdv8OnUKRfLO8w9eEPlOGPUZSzDzO7EMIHKaGToVCLhDKK\nzrLrg1E+VDPVY/NMSwOTdQ8t8udI0hYz+H1IqJlezGQsulO0Rpjd6FuUMFLl8U1F\nskZsZVsW6T8SM4kmuZfzpFdtg7hQ41bq2Us5zT51bkePoL6Er0eYXFHB8hnQJtlw\nWWoc3n+uH2GbGd9+ur8RUksfn5yxENajB2JeH1Hd2TmItWjrkUoFiPcYZquwtSWm\nqtntp6FHAgMBAAECggEAO47n7gRzgc6vL01ZtaNWz2kfsBk9NT2R4ZGYQ27XPBaF\nq1wKKUY/bTwUZ0jZLxpPgrRM2RmXD75q/vkqoIfxPXxWycpf5UtfOfGQBivPrqK/\n+csoiH5yHm8xOSPsAQCOdWCljA64C4BXfSUo8QZsxrVZDakaKE3JFVmXhcbYnBXO\nc9AWxZ/nFTga42L6Ou1RbRTzFto++m6j9wcknxInIaDepG8koTDUcMaGoy/vPPJ9\nYOd37szl+Wbv5GZLZXYCMkiju+5mgyEX63ZBgSvlzXGsawW5aGQuibbjziiUs5hP\nsST59knKKbO8xx98SSESpHjWcRw5UfpfMyY3hAxrIQKBgQD79IPUoODyTtVYi1eu\nbp40KU3zEh07hu3q3GlZ3n2Wnk3IxTK73SZSKJ1w6VjT/pnkCfGhJO/98nZ7ZdTx\nfYgPajZhE6iPLEnq4CmvlMwK6+AON7l0hZE5A0vq25qNlYrvQK6hrvKfyif4uKl3\na/GdTheD8jew7xRGrIWa4wZxTwKBgQDFDhiCODfVMh2PUBtrUlUf6U87TeF15YSW\ndxWkWohdrAVdQGND/CTEYt1J3LDGmLukv4Rp0Twh4Nq6l8UJWUE5JKyKooHIfXQ7\n6xsVsHpdcF0RCFN2rJGCaxC17vHDxzp1a81Ap8zbwPAvWZ8Rnv/DcKaoeLOXYt6M\nIEL6Ei+iiQKBgQCpj3e8+/wG9gjcSwJaMLWlcvqzj8g+jGLHQUhhI7uvRqAgcp3f\nEki81/qEx3VxThGxBwQnJ52fcLJN/00crBeKEDfCgyFYIT0ppWxIbsIWw4EI8HWN\ntmnyTYak6t+LU02qEAS2aO99m+XknBnodaun6qsmsDbMi0lA+s/7Wbe3PwKBgFso\nCyRqN0HTniMGzrhV7PUHK9TmUS8FztEAI63VB5I1moGp4IG5qZSDm5Sol8o3K06q\nHeoJlcSiTOzWepq5hFeX5I15YYpKprN1LiFZczG4YgUYEewrJmDrgF55O7PyfNOG\n2/tV5Imf9jwhPFmdcPmLKj1zILkeTo8J+ZHPSePpAoGAH32DuQlSEZOlkByG8fiO\nAiNxIqAumjwmSseg8BM1DUFgJ5dS0IuLoOJmnnxRPp67yKFhcVjow1LPJMqqDw/6\nW95W2Bgif1c17VM08Bd2MsAlnLNkoLfkuv5raaZW9y6uuiT/88D0UAjmSYep5qP+\nObWgLl7HbBochn+rOwNsjyI=\n-----END PRIVATE KEY-----\n",
+  "client_email": "florafind1@flora-find.iam.gserviceaccount.com",
+  "client_id": "106607677143825316100",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/florafind1%40flora-find.iam.gserviceaccount.com"
+}
