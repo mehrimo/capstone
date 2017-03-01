@@ -52,8 +52,8 @@ function drawImage(content) {
 
 
 /**
- * Sends the given file contents to the Cloud Vision API and outputs the
- * results.
+ Sends the given file contents to the Cloud Vision API and outputs the
+results.
  */
 function sendFileToCloudVision(content) {
 
@@ -79,20 +79,37 @@ function sendFileToCloudVision(content) {
     contentType: 'application/json'
   }).fail(function(jqXHR, textStatus, errorThrown) {
     $('#results').text('ERRORS: ' + textStatus + ' ' + errorThrown);
-  }).done(displayJSON).done(drawFaces);
+  }).done(displayJSON);
 }
 
 /**
  * Displays the results.
  */
 function displayJSON(data) {
+  console.log(data);
   var contents = JSON.stringify(data, null, 4);
-  $("#results").text(contents);
+  var description = data.responses[0].labelAnnotations[2].description;
+  // var wikiCB = " Some info about the flower";
+  $("#results").text(description);
+
+  // $("#results").text(data);
+
+
+  // if (description == 'colorado blue columbine') {
+  //   $("#wiki").text(wikiCB);
+  // }
+
 }
+  // console.log(data.responses[0].labelAnnotations[2].description);
+  // var description = data.responses[0].labelAnnotations[0].description
 
-identity = response['responses'][0]['labelAnnotations'][1]['description']
-
-console.log(identity);
+// console.log(['responses']['labelAnnotations']['1']['description']);
+//
+// responses.labelAnnotations.description
+//
+// return identity;
+//
+// console.log(identity);
 
 // function drawFaces(data) {
 //
