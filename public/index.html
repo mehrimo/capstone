@@ -47,9 +47,11 @@
         <option value="SAFE_SEARCH_DETECTION">SAFE_SEARCH_DETECTION</option>
         <option value="IMAGE_PROPERTIES">IMAGE_PROPERTIES</option>
       </select><br /> -->
-      <input type="file" name="fileField"><br /><br />
+      <!-- <input type="file" name="fileField"><br /> -->
+      <input type="file" accept="image/*" capture="camera" name="fileField"><br />
       <input type="submit" name="submit" value="Identify">
     </form>
+
 
     <canvas id="canvas"></canvas>
 
@@ -57,6 +59,14 @@
     <div></div>
     Plant/Flower Name:<div style="white-space:pre" id="results"></div>
     Info:<div style="white-space:pre" id="wiki"></div>
+
+    <div id="wikiInfo">&nbsp;</div>
+
+
+
+    <section id="article">
+
+    </section>
 
 <script
 src="https://code.jquery.com/jquery-2.2.4.min.js"></script>

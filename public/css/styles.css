@@ -1,3 +1,16 @@
+.flex-container {
+  -webkit-justify-content: center; /* Safari */
+  justify-content:         center;
+  display: inline-flex;
+
+}
+/*
+.flex-container {
+  display: -webkit-inline-flex;
+}
+*/
+
+
 body {
     padding-top: 70px;
     background-color: #88D498;
