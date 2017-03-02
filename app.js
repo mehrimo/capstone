@@ -5,12 +5,14 @@ var IMG_URL = "https://vision.googleapis.com/v1/images:annotate?key=" + apiKey;
 // var WIKI_QUERY = "http://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page=Aquilegia_caerulea&callback=?";
 
 // colorado blue columbine
-var plantName = "Aquilegia_caerulea"
+// var plantName = "Aquilegia_caerulea"
 
-// colorado blue columbine
-var plantName = "Aquilegia_caerulea"
+// hedgehog cactus
+// var plantName = "Echinocereus_engelmannii"
 
 var WIKI_QUERY = "http://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page="+plantName+"&callback=?";
+
+var plantName = 
 
 var canvas
 var ctx
@@ -77,7 +79,7 @@ function sendFileToCloudVision(content) {
       },
       features: [{
         type: 'LABEL_DETECTION',
-        maxResults: 10
+        maxResults: 5
       }]
     }]
   };
@@ -92,17 +94,7 @@ function sendFileToCloudVision(content) {
   }).done(displayJSON);
 
 
-
-
-//Wikipedia Link 1
-  // $.getJSON('http://en.wikipedia.org/w/api.php?action=parse&page=google&prop=text&format=json&callback=?', function(json) {
-  //    $('#wikiInfo').html(json.parse.text["*"]);
-  //    $("#wikiInfo").find("a:not(.references a)").attr("href", function(){ return "http://www.wikipedia.org" + $(this).attr("href");});
-  //    $("#wikiInfo").find("a").attr("target", "_blank");
-  //  });
-
-
-   //Wikipedia Link 2
+  //Wikipedia Link 2
   $.ajax({
         type: "GET",
         url: WIKI_QUERY,
@@ -130,42 +122,31 @@ function sendFileToCloudVision(content) {
     });
 }
 
-
 /**
  * Displays the results.
  */
 function displayJSON(data) {
   console.log(data);
+
   var contents = JSON.stringify(data, null, 4);
-  var description = [data.responses[0].labelAnnotations[0].description,   data.responses[0].labelAnnotations[1].description ,  data.responses[0].labelAnnotations[2].description]
-  var wikiCB = " Some info about the flower, is it poisonous?";
-  $("#results").text(description);
 
+  var description = [data.responses[0].labelAnnotations[0].description,   data.responses[0].labelAnnotations[1].description ,  data.responses[0].labelAnnotations[2].description].filter(onlyName);
 
-  if (description === "flower") {
-    console.log('flower');
-  }
-  // $("#results").text(data);
-
-
-  if (description == 'colorado blue columbine') {
-    $("#wiki").text(wikiCB);
+  function onlyName(description) {
+    return description !== "plant" && description !== "flower";
   }
 
+$("#results").text(description);
 
 }
 
-// if description includes plant or flower move on.
-  // console.log(data.responses[0].labelAnnotations[2].description);
-  // var description = data.responses[0].labelAnnotations[0].description
+// create a filter function - if description includes plant or flower move on.
 
-// console.log(['responses']['labelAnnotations']['1']['description']);
-//
-// responses.labelAnnotations.description
-//
-// return identity;
-//
-// console.log(identity);
+  // if (description == 'colorado blue columbine') {
+  //   $("#wiki").text(wikiCB);
+  // }
+
+
 
 // function drawFaces(data) {
 //
