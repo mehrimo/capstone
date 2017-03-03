@@ -4,12 +4,12 @@
   display: inline-flex;
 
 }
-/*
-.flex-container {
-  display: -webkit-inline-flex;
+#upload-wrap {
+    float: left;
+    height: 30px;
+    width: 200px;
+    display:none;
 }
-*/
-
 
 body {
     padding-top: 70px;

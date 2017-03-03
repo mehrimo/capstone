@@ -94,7 +94,7 @@ function sendFileToCloudVision(content) {
   }).done(displayJSON);
 
 
-  //Wikipedia Link 2
+  //Wikipedia Link 1
   $.ajax({
         type: "GET",
         url: WIKI_QUERY,
@@ -120,7 +120,11 @@ function sendFileToCloudVision(content) {
         error: function (errorMessage) {
         }
     });
+    
 }
+
+
+
 
 /**
  * Displays the results.

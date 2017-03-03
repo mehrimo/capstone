@@ -7,6 +7,9 @@
     <!-- Boostrap CDN -->
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 
+  <!-- Skeleton CDN -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" rel="stylesheet">
+
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
   <!-- Custom CSS -->
@@ -36,38 +39,55 @@
         </div>
     </nav>
 
-    <form id="fileform" action="">
-      <!-- <select name="type">
-        <option value="LANDMARK_DETECTION">LANDMARK_DETECTION</option>
-        <option value="TYPE_UNSPECIFIED">TYPE_UNSPECIFIED</option>
-        <option value="FACE_DETECTION">FACE_DETECTION</option>
-        <option value="LOGO_DETECTION">LOGO_DETECTION</option>
-        <option value="LABEL_DETECTION">LABEL_DETECTION</option>
-        <option value="TEXT_DETECTION">TEXT_DETECTION</option>
-        <option value="SAFE_SEARCH_DETECTION">SAFE_SEARCH_DETECTION</option>
-        <option value="IMAGE_PROPERTIES">IMAGE_PROPERTIES</option>
-      </select><br /> -->
-      <!-- <input type="file" name="fileField"><br /> -->
-      <input type="file" accept="image/*" capture="camera" name="fileField"><br />
-      <input type="submit" name="submit" value="Identify">
-    </form>
+    <div class="container">
+     <div class="row">
+       <div id="searchContainer">
+         <h3 id="headlineTitle">Identify Flowers and Plants</h3>
 
+          <canvas id="canvas"></canvas>
 
-    <canvas id="canvas"></canvas>
+          <form id="fileform" action="">
+            <!-- <input type="file" name="fileField"><br /> -->
+
+            <!-- new upload button -->
+             <button type="button" class="three columns button-primary" onclick="document.getElementById('upload-field').click();"><p> Upload A Photo </p></button>
+                 <div id="upload-wrap">
+                     <input type="file" accept="image/*" capture="camera" id="upload-field" name="fileField"/>
+                 </div>
+
+              <!-- old upload button -->
+              <!-- <input type="file" accept="image/*" capture="camera" name="fileField"> -->
+
+            <input class="three columns button-primary" value="Identify" type="submit" name="submit">
+
+            <input class="three columns button-primary" value="Search" type="button" onclick="search()">
+
+          </form>
 
     <!-- <code style="white-space:pre" id="results"></code> -->
-    <div></div>
-    Plant/Flower Name:<div style="white-space:pre" id="results"></div>
-    Info:<div style="white-space:pre" id="wiki"></div>
+        <div></div>
+        Plant/Flower Name:<div style="white-space:pre" id="results"></div>
+        Info:<div style="white-space:pre" id="wiki"></div>
 
-    <div id="wikiInfo">&nbsp;</div>
-    <div id="wikiLink">&nbsp;</div>
+        <div id="wikiInfo">&nbsp;
+        </div>
+        <div id="wikiLink">&nbsp;
+        </div>
+
+        <section id="article">
+
+        </section>
 
 
+        </div>
+      </div>
 
-    <section id="article">
+      <div id="resultsList" class="row">
+        <!-- Search Results will be populated into here from jQuery -->
+      </div>
+    </div>
 
-    </section>
+
 
 <script
 src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
