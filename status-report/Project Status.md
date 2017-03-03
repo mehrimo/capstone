@@ -6,9 +6,7 @@ The upload photo functionality is working and pulls in the correct data from the
 
 It is also able to pull in the Wikipedia info, however since Wikipedia needs the scientific name (which Google doesn't provide) I'm having to hard code the scientific names into the variables. This way it will work on presentation day. 
 
-
-
-![]()
+ ![https://github.com/mehrimo/capstone/blob/master/status-report/Screen%20Shot%202017-03-03%20at%209.02.05%20AM.png](Screen Shot 2017-03-03 at 9.02.05 AM.png)
 
 
 **Current Bugs:**
