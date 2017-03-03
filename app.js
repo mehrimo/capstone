@@ -5,14 +5,14 @@ var IMG_URL = "https://vision.googleapis.com/v1/images:annotate?key=" + apiKey;
 // var WIKI_QUERY = "http://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page=Aquilegia_caerulea&callback=?";
 
 // colorado blue columbine
-// var plantName = "Aquilegia_caerulea"
+var plantName = "Aquilegia_caerulea"
 
 // hedgehog cactus
 // var plantName = "Echinocereus_engelmannii"
 
 var WIKI_QUERY = "http://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page="+plantName+"&callback=?";
 
-var plantName = 
+// var plantName =
 
 var canvas
 var ctx
@@ -133,7 +133,7 @@ function displayJSON(data) {
   var description = [data.responses[0].labelAnnotations[0].description,   data.responses[0].labelAnnotations[1].description ,  data.responses[0].labelAnnotations[2].description].filter(onlyName);
 
   function onlyName(description) {
-    return description !== "plant" && description !== "flower";
+    return description !== "plant" && description !== "flower"  && description !== "cactus";
   }
 
 $("#results").text(description);
