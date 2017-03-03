@@ -8,8 +8,7 @@ It is also able to pull in the Wikipedia info, however since Wikipedia needs the
 
 
 
- ![Screen Shot 2017-03-03 at 9.02.05 AM](/Users/mehri/Desktop/Screen Shot 2017-03-03 at 9.02.05 AM.png)
-
+![]()
 
 
 **Current Bugs:**
