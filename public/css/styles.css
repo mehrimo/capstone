@@ -1,9 +1,24 @@
-.flex-container {
-  -webkit-justify-content: center; /* Safari */
-  justify-content:         center;
-  display: inline-flex;
 
+#main {
+  background-image: url(upfeathers.png);
+  /*background-image: url(topography.png);*/
+  /*background-color: #333333;*/
+  /*background-repeat: no-repeat;*/
+  background-repeat: repeat;
+  padding-top:70px;
+  /*background-position: center;
+  background-attachment: fixed;
+  background-size: cover;*/
 }
+
+
+
+/*.flex-container {
+  -webkit-justify-content: center; /* Safari */
+  /*justify-content:         center;
+  display: inline-flex;*/
+
+/*}*/
 #upload-wrap {
     float: left;
     height: 30px;
@@ -11,10 +26,7 @@
     display:none;
 }
 
-body {
-    padding-top: 70px;
-    background-color: #88D498;
-}
+
 
 .hero-spacer {
     margin-top: 50px;
@@ -59,11 +71,14 @@ h5 {
   padding-bottom: 20px;
 }
 
-
-
-img {
-  max-width: 350px !important
+.mobile {
+  /*make responsive*/
 }
+
+/*img {
+  max-width: 25% !important;
+  max-height: auto;
+}*/
 
 .btn {
   background-color: #D1AD2B;

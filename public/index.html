@@ -21,7 +21,7 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:700,300,300italic|Roboto+Slab|Roboto+Mono:300" rel="stylesheet">
   </head>
 
-  <body>
+  <body id="main">
 
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -44,7 +44,7 @@
        <div id="searchContainer">
          <h3 id="headlineTitle">Identify Flowers and Plants</h3>
 
-          <canvas id="canvas"></canvas>
+          <canvas id="canvas" class=""></canvas>
 
           <form id="fileform" action="">
             <!-- <input type="file" name="fileField"><br /> -->
@@ -54,9 +54,7 @@
                  <div id="upload-wrap">
                      <input type="file" accept="image/*" capture="camera" id="upload-field" name="fileField"/>
                  </div>
-
-              <!-- old upload button -->
-              <!-- <input type="file" accept="image/*" capture="camera" name="fileField"> -->
+          
 
             <input class="three columns button-primary" value="Identify" type="submit" name="submit">
 
@@ -69,10 +67,7 @@
         Plant/Flower Name:<div style="white-space:pre" id="results"></div>
         Info:<div style="white-space:pre" id="wiki"></div>
 
-        <div id="wikiInfo">&nbsp;
-        </div>
-        <div id="wikiLink">&nbsp;
-        </div>
+
 
         <section id="article">
 

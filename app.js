@@ -8,11 +8,9 @@ var IMG_URL = "https://vision.googleapis.com/v1/images:annotate?key=" + apiKey;
 var plantName = "Aquilegia_caerulea"
 
 // hedgehog cactus
-// var plantName = "Echinocereus_engelmannii"
+var plantName = "Echinocereus_engelmannii"
 
 var WIKI_QUERY = "http://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page="+plantName+"&callback=?";
-
-// var plantName =
 
 var canvas
 var ctx
@@ -21,6 +19,8 @@ $(document).ready(function() {
 
   canvas = document.querySelector('#canvas')
   ctx = canvas.getContext('2d')
+
+
 
   $('#fileform').on('submit', uploadFiles);
 });
@@ -53,11 +53,16 @@ function processFile(event) {
 function drawImage(content) {
   var image = new Image()
   image.onload = function () {
-    canvas.width = image.width
-    canvas.height = image.height
-    // canvas.width = image.width
-    // canvas.height = image.height
-    ctx.drawImage(image, 0, 0)
+    var perferedWidth = 500;
+    var ratio = perferedWidth / image.width;
+    canvas.width = image.width * ratio;
+    canvas.height = image.height * ratio;
+    // ctx.translate(canvas.width/2,canvas.height/2);
+    ctx.translate(canvas.width/2,canvas.height/2);
+    //rotate the photo
+    ctx.rotate(90*Math.PI/180);
+    // ctx.drawImage(image, 0, 0, canvas.width, canvas.height)
+    ctx.drawImage(image,-image.width/2,-image.width/2)
   }
   image.src = content;
 }
@@ -120,7 +125,7 @@ function sendFileToCloudVision(content) {
         error: function (errorMessage) {
         }
     });
-    
+
 }
 
 
@@ -139,6 +144,13 @@ function displayJSON(data) {
   function onlyName(description) {
     return description !== "plant" && description !== "flower"  && description !== "cactus";
   }
+
+
+
+  // function matchingWiki(description) {
+  //   if (description === "colorado blue columbine") {
+  //   plantName = "Aquilegia_caerulea";
+  // }
 
 $("#results").text(description);
 
