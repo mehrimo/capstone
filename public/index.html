@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+ <html>
+   <head>
+     <meta charset="utf-8">
+     <title>Flora Find</title>
+
+     <!-- Boostrap CDN -->
+   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+   <!-- Skeleton CDN -->
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" rel="stylesheet">
+
+   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+   <!-- Custom CSS -->
+  <link href="css/styles.css" rel="stylesheet">
+
+   <!-- Custom Fonts -->
+   <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700" rel="stylesheet">
+
+   <link href="https://fonts.googleapis.com/css?family=Roboto:700,300,300italic|Roboto+Slab|Roboto+Mono:300" rel="stylesheet">
+ </head>
+
+ <body id="main">
+
+   <!-- Navigation -->
+   <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+       <div class="container">
+
+           <div class="navbar-header navfont">
+               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                   <span class="sr-only">Toggle navigation</span>
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+               </button>
+               <a id="navfont" class="navbar-brand" href="#">Flora Find</a>
+           </div>
+       </div>
+   </nav>
+
+   <div class="container">
+    <div class="row">
+        <h3 id="headlineTitle">Identify Flowers and Plants</h3>
+         <canvas id="canvas" class=""></canvas>
+     </div>
+     <div class="row">
+         <form id="fileform" action="">
+           <!-- <input type="file" name="fileField"><br /> -->
+
+           <!-- new upload button -->
+            <button type="button" class="three columns button-primary" onclick="document.getElementById('upload-field').click();"><p> Upload A Photo </p></button>
+                <div id="upload-wrap">
+                    <input type="file" accept="image/*" capture="camera" id="upload-field" name="fileField"/>
+                </div>
+
+
+           <input class="three columns button-primary" value="Identify" type="submit" name="submit">
+
+           <input class="three columns button-primary" value="Search" type="button" onclick="search()">
+
+         </form>
+ </div>
+   <!-- <code style="white-space:pre" id="results"></code> -->
+       <div class="row">
+       <div style="white-space:pre" id="results"></div>
+       <!-- Wiki info -->
+         <section id="article">
+         </section>
+ </div>
+ </div>
+
+
+
+ <script
+ src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+ <script type="text/javascript" src="../key.js"></script>
+ <script type="text/javascript" src="../app.js"></script>
+ </body>
+ -
+ </html>
