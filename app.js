@@ -10,7 +10,7 @@ var plantName = "Aquilegia_caerulea"
 // hedgehog cactus
 var plantName = "Echinocereus_engelmannii"
 
-var WIKI_QUERY = "http://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page="+plantName+"&callback=?";
+var WIKI_QUERY = "https://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page="+plantName+"&callback=?";
 
 var canvas
 var ctx
