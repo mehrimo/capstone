@@ -41,11 +41,10 @@
 
     <div class="container">
      <div class="row">
-       <div id="searchContainer">
          <h3 id="headlineTitle">Identify Flowers and Plants</h3>
-
           <canvas id="canvas" class=""></canvas>
-
+      </div>
+      <div class="row">
           <form id="fileform" action="">
             <!-- <input type="file" name="fileField"><br /> -->
 
@@ -54,33 +53,26 @@
                  <div id="upload-wrap">
                      <input type="file" accept="image/*" capture="camera" id="upload-field" name="fileField"/>
                  </div>
-          
+
 
             <input class="three columns button-primary" value="Identify" type="submit" name="submit">
 
             <input class="three columns button-primary" value="Search" type="button" onclick="search()">
 
           </form>
-
+</div>
     <!-- <code style="white-space:pre" id="results"></code> -->
-        <div></div>
-        Plant/Flower Name:<div style="white-space:pre" id="results"></div>
-        Info:<div style="white-space:pre" id="wiki"></div>
+        <div class="row">
+        <div style="white-space:pre" id="results"></div>
+        <!-- Wiki info -->
+          <section id="article">
+          </section>
+</div>
 
 
-
-        <section id="article">
-
-        </section>
 
 
         </div>
-      </div>
-
-      <div id="resultsList" class="row">
-        <!-- Search Results will be populated into here from jQuery -->
-      </div>
-    </div>
 
 
 

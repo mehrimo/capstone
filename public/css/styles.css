@@ -11,7 +11,9 @@
   background-size: cover;*/
 }
 
-
+#results {
+  font-style: italic;
+}
 
 /*.flex-container {
   -webkit-justify-content: center; /* Safari */

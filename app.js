@@ -58,11 +58,10 @@ function drawImage(content) {
     canvas.width = image.width * ratio;
     canvas.height = image.height * ratio;
     // ctx.translate(canvas.width/2,canvas.height/2);
-    ctx.translate(canvas.width/2,canvas.height/2);
-    //rotate the photo
-    ctx.rotate(90*Math.PI/180);
-    // ctx.drawImage(image, 0, 0, canvas.width, canvas.height)
-    ctx.drawImage(image,-image.width/2,-image.width/2)
+    // ctx.translate(canvas.width/2,canvas.height/2);
+    // ctx.rotate(90*Math.PI/180);
+    ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+    // ctx.drawImage(image,-image.width/2,-image.height/2)
   }
   image.src = content;
 }
