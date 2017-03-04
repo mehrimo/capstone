@@ -1,6 +1,6 @@
 "use strict";
 
-var IMG_URL = "https://vision.googleapis.com/v1/images:annotate?key=" + apiKey;
+var IMG_URL = "https://vision.googleapis.com/v1/images:annotate?key=AIzaSyABVZ-jyFG1avZQJBfz25FLWjqR2wukH08";
 
 // var WIKI_QUERY = "http://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page=Aquilegia_caerulea&callback=?";
 
