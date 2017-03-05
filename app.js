@@ -5,29 +5,30 @@ var IMG_URL = "https://vision.googleapis.com/v1/images:annotate?key=AIzaSyABVZ-j
 // var WIKI_QUERY = "http://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page=Aquilegia_caerulea&callback=?";
 
 // colorado blue columbine
-var plantName = "Aquilegia_caerulea"
-
+// var plantName = "Aquilegia_caerulea"
 // hedgehog cactus
 var plantName = "Echinocereus_engelmannii"
 
-var WIKI_QUERY = "https://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page="+plantName+"&callback=?";
 
+// var description
 var canvas
 var ctx
+
+// var WIKI_QUERY = "https://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page="+encodeURIComponent(description)+"&callback=?";
+// console.log("Can I find you? ", description);
+
+var WIKI_QUERY = "https://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page="+plantName+"&callback=?";
 
 $(document).ready(function() {
 
   canvas = document.querySelector('#canvas')
   ctx = canvas.getContext('2d')
 
-
-
   $('#fileform').on('submit', uploadFiles);
 });
-/**
- * 'submit' event handler - reads the image bytes and sends it to the Cloud
- * Vision API.
- */
+
+  // 'submit' event handler - reads the image bytes and sends it to the Cloud
+  // Vision API.
 function uploadFiles(event) {
   event.preventDefault(); // Prevent the default form post
 
@@ -38,9 +39,7 @@ function uploadFiles(event) {
   reader.readAsDataURL(file);
 }
 
-/**
- * Event handler for a file's data url - extract the image data and pass it off.
- */
+// Event handler for a file's data url - extract the image data and pass it off.
 function processFile(event) {
   var content = event.target.result;
 
@@ -57,11 +56,7 @@ function drawImage(content) {
     var ratio = perferedWidth / image.width;
     canvas.width = image.width * ratio;
     canvas.height = image.height * ratio;
-    // ctx.translate(canvas.width/2,canvas.height/2);
-    // ctx.translate(canvas.width/2,canvas.height/2);
-    // ctx.rotate(90*Math.PI/180);
     ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
-    // ctx.drawImage(image,-image.width/2,-image.height/2)
   }
   image.src = content;
 }
@@ -130,9 +125,9 @@ function sendFileToCloudVision(content) {
 
 
 
-/**
- * Displays the results.
- */
+
+// Displays the flower name
+
 function displayJSON(data) {
   console.log(data);
 
@@ -144,8 +139,6 @@ function displayJSON(data) {
     return description !== "plant" && description !== "flower"  && description !== "cactus" && description !== "close up";
   }
 
-
-
   // function matchingWiki(description) {
   //   if (description === "colorado blue columbine") {
   //   plantName = "Aquilegia_caerulea";
@@ -153,34 +146,8 @@ function displayJSON(data) {
 
 $("#results").text(description);
 
+console.log("The name is: ", description);
+console.log(encodeURIComponent(description));
+
+
 }
-
-// create a filter function - if description includes plant or flower move on.
-
-  // if (description == 'colorado blue columbine') {
-  //   $("#wiki").text(wikiCB);
-  // }
-
-
-
-// function drawFaces(data) {
-//
-//   var responses = data.responses;
-//
-//   if (Object.keys(responses[0]).length === 0) {
-//     return;
-//   }
-//
-//   var annotations = responses[0].faceAnnotations
-//   var vertices = annotations[0].boundingPoly.vertices
-//
-//   for (var i = annotations.length - 1; i >= 0; i--) {
-//     var vertices = annotations[i].boundingPoly.vertices
-//     var width = vertices[2].x - vertices[0].x
-//     var height = vertices[2].y - vertices[0].y
-//
-//     ctx.lineWidth = 5
-//     ctx.strokeRect(vertices[0].x, vertices[0].y, width, height)
-//   }
-//
-// }

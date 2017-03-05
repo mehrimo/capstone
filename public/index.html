@@ -4,7 +4,9 @@
      <meta charset="utf-8">
      <title>Flora Find</title>
 
-     <!-- Boostrap CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" rel="stylesheet">
+
+   <!-- Boostrap CDN -->
    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 
    <!-- Skeleton CDN -->
@@ -44,23 +46,23 @@
         <h3 id="headlineTitle">Identify Flowers and Plants</h3>
          <canvas id="canvas" class=""></canvas>
      </div>
+  </div>
+
+  <div class="container">
      <div class="row">
          <form id="fileform" action="">
            <!-- <input type="file" name="fileField"><br /> -->
 
            <!-- new upload button -->
-            <button type="button" class="three columns button-primary" onclick="document.getElementById('upload-field').click();"><p> Upload A Photo </p></button>
+            <button type="button" class="one-half column category button-primary" onclick="document.getElementById('upload-field').click();"><p> Upload A Photo </p></button>
                 <div id="upload-wrap">
                     <input type="file" accept="image/*" capture="camera" id="upload-field" name="fileField"/>
                 </div>
-
-
-           <input class="three columns button-primary" value="Identify" type="submit" name="submit">
-
-           <input class="three columns button-primary" value="Search" type="button" onclick="search()">
-
+           <input class="one-half column category button-primary" value="Identify" type="submit" name="submit">
          </form>
- </div>
+    </div>
+  </div>
+  <div class="container">
    <!-- <code style="white-space:pre" id="results"></code> -->
        <div class="row">
        <div style="white-space:pre" id="results"></div>
@@ -75,9 +77,8 @@
  <script
  src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
  <!-- <script type="text/javascript" src="../key.js"></script> -->
  <script type="text/javascript" src="../app.js"></script>
  </body>
- 
+
  </html>
