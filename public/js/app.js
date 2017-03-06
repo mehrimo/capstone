@@ -71,10 +71,8 @@ function drawImage(content) {
 }
 
 
-/**
- Sends the given file contents to the Cloud Vision API and outputs the
-results.
- */
+
+// Sends the image to the Cloud Vision API and outputs the results.
 function sendFileToCloudVision(content) {
 
   // var type = $("#fileform [name=type]").val();
@@ -104,12 +102,7 @@ function sendFileToCloudVision(content) {
 
 }
 
-
-
-
-
 // Displays the flower name
-
 function displayJSON(data) {
   console.log(data);
 
@@ -121,20 +114,15 @@ function displayJSON(data) {
     return description !== "plant" && description !== "flower"  && description !== "cactus" && description !== "close up";
   }
 
-  // function matchingWiki(description) {
-  //   if (description === "colorado blue columbine") {
-  //   plantName = "Aquilegia_caerulea";
-  // }
-
 $("#results").text(description);
 
-  var wikiSearch = encodeURIComponent(description);
+  var wikiSearch = encodeURIComponent(description)
   console.log(encodeURIComponent(description));
 
-  //Wikipedia Link 1
+  //Wikipedia Search
   $.ajax({
         type: "GET",
-        url: "https://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page="+wikiSearch+"&callback=?",
+        url: "http://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page="+wikiSearch+"&callback=?",
         contentType: "application/json; charset=utf-8",
         async: false,
         dataType: "json",
