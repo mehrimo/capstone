@@ -27,6 +27,11 @@ $(document).ready(function() {
   $('#fileform').on('submit', uploadFiles);
 });
 
+//Upload photo button
+document.getElementById('upload-photo').onclick = function(){
+    document.getElementById('upload-field').click();
+};
+
   // 'submit' event handler - reads the image bytes and sends it to the Cloud
   // Vision API.
 function uploadFiles(event) {

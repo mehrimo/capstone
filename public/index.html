@@ -1,84 +1,267 @@
 <!DOCTYPE html>
- <html>
-   <head>
-     <meta charset="utf-8">
-     <title>Flora Find</title>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Flora Find</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta content="A fully responsive landing page template" name="description" />
+        <meta content="Coderthemes" name="author" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" rel="stylesheet">
+        <link rel="shortcut icon" href="images/favicon.ico">
 
-   <!-- Boostrap CDN -->
-   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Google Fonts -->
+        <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
 
-   <!-- Skeleton CDN -->
-   <link href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" rel="stylesheet">
+        <!-- Boostrap CDN -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 
-   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <!-- Font Icons CSS -->
+        <link href="css/pe-icon-7-stroke.css" rel="stylesheet">
 
-   <!-- Custom CSS -->
-  <link href="css/styles.css" rel="stylesheet">
+        <!-- Custom styles for this template -->
+        <link href="css/styles.css" rel="stylesheet">
 
-   <!-- Custom Fonts -->
-   <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700" rel="stylesheet">
+        <!-- Color style -->
+        <link href="css/colors/default.css" rel="stylesheet">
 
-   <link href="https://fonts.googleapis.com/css?family=Roboto:700,300,300italic|Roboto+Slab|Roboto+Mono:300" rel="stylesheet">
- </head>
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
+        <!--[if lt IE 9]>
+          <script src="js/html5shiv.js"></script>
+          <script src="js/respond.min.js"></script>
+        <![endif]-->
 
- <body id="main">
+    </head>
 
-   <!-- Navigation -->
-   <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-       <div class="container">
 
-           <div class="navbar-header navfont">
-               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                   <span class="sr-only">Toggle navigation</span>
-                   <span class="icon-bar"></span>
-                   <span class="icon-bar"></span>
-                   <span class="icon-bar"></span>
-               </button>
-               <a id="navfont" class="navbar-brand" href="#">Flora Find</a>
-           </div>
-       </div>
-   </nav>
+    <body data-spy="scroll" data-target="#navbar-menu">
 
-   <div class="container">
-    <div class="row">
-        <h3 id="headlineTitle">Identify Flowers and Plants</h3>
-         <canvas id="canvas" class=""></canvas>
-     </div>
-  </div>
+        <!-- Navbar -->
+        <div class="navbar navbar-custom navbar-fixed-top sticky" role="navigation" id="sticky-nav">
+            <div class="container">
 
-  <div class="container">
-     <div class="row">
-         <form id="fileform" action="">
-           <!-- <input type="file" name="fileField"><br /> -->
+                <!-- Navbar-header -->
+                <div class="navbar-header">
 
-           <!-- new upload button -->
-            <button type="button" class="one-half column category button-primary" onclick="document.getElementById('upload-field').click();"><p> Upload A Photo </p></button>
-                <div id="upload-wrap">
-                    <input type="file" accept="image/*" capture="camera" id="upload-field" name="fileField"/>
+                    <!-- Responsive menu button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    <!-- LOGO -->
+                    <a class="navbar-brand logo" href="index.html">
+                        Flora Find Logo
+                    </a>
+
                 </div>
-           <input class="one-half column category button-primary" value="Identify" type="submit" name="submit">
-         </form>
-    </div>
-  </div>
-  <div class="container">
-   <!-- <code style="white-space:pre" id="results"></code> -->
-       <div class="row">
-       <div style="white-space:pre" id="results"></div>
-       <!-- Wiki info -->
-         <section id="article">
-         </section>
- </div>
- </div>
+                <!-- end navbar-header -->
+
+                <!-- menu -->
+                <div class="navbar-collapse collapse" id="navbar-menu">
+
+                    <!-- Navbar left -->
+                    <ul class="nav navbar-nav nav-custom-left">
+                        <li class="active">
+                            <a href="#home" class="nav-link">Home</a>
+                        </li>
+                        <li>
+                            <a href="#features" class="nav-link">Features</a>
+                        </li>
+                        <li>
+                            <a href="#pricing" class="nav-link">Plans</a>
+                        </li>
+                        <li>
+                            <a href="#clients" class="nav-link">Clients</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" data-toggle="dropdown">
+                                Pages
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu arrow">
+                                <li><a href="about-us.html">About Us</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="faq.html">FAQ</a></li>
+                                <li><a href="jobs.html">Jobs</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <!-- Navbar right -->
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="">Login</a>
+                        </li>
+                        <li>
+                            <button type="button" class="btn btn-white-fill navbar-btn-alt">Try for Free</button>
+                        </li>
+                    </ul>
+
+                </div>
+                <!--/Menu -->
+            </div>
+            <!-- end container -->
+        </div>
+        <!-- End navbar-custom -->
 
 
 
- <script
- src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
- <!-- <script type="text/javascript" src="../key.js"></script> -->
- <script type="text/javascript" src="../app.js"></script>
- </body>
+        <!-- HOME -->
+        <section class="home bg-img-1" id="home">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <div class="home-fullscreen" id="home-fullscreen">
+                            <div class="full-screen">
+                                <div class="home-wrapper home-wrapper-alt">
+                                  <form id="fileform" action="">
+                                    <h1 class="font-light">Identify flowers and plants</h1>
+                                    <h4>Flora Find helps you identify different types of plants and flowers on the go. Just snap a picture with your phone. It's as easy as that. </h4>
+                                    <input class="btn btn-custom" value="Upload Photo" id="upload-photo" type="submit" name="submit">
+                                    <div id="upload-wrap">
+                                      <input type="file" accept="image/*" capture="camera" id="upload-field" name="fileField"/>
+                                      </div>
+                                    <input class="btn btn-custom" value="Identify" type="submit" id="identify-btn" name="submit">
+                                  </form>
+                                  <!-- <canvas id="canvas" class=""></canvas> -->
+                                  <!-- Plant Name -->
+                                  <!-- <div style="white-space:pre" id="results"></div> -->
+                                  <!-- Wiki info -->
+                                    <!-- <div id="article">
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END HOME -->
 
- </html>
+        <!-- Plant and Flower Info -->
+        <section class="section">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="text-center">
+                            <div class="title-box-icon">
+                                <i class="pe-7s-leaf"></i>
+                                <h3 class="title">Results</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- end row -->
+
+                <!-- Photo goes here -->
+                <div class="col-sm-7">
+                 <canvas id="canvas" class="img-responsive"></canvas>
+                </div>
+                <!-- Text goes here -->
+                <div class="row">
+                    <div class="col-sm-5">
+                        <div class="feat-description">
+                            <h4 id="results" class="text-muted"></h4>
+                            <p id="article"></p>
+                        </div>
+                    </div>
+                </div><!-- end row -->
+
+            </div> <!-- end container -->
+        </section>
+        <!-- end plant and flower info -->
+
+
+
+        <!-- Features Alt -->
+        <section class="section">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="text-center">
+                            <div class="title-box-icon">
+                                <i class="pe-7s-camera"></i>
+                                <h3 class="title">Tips for Accurate Photo Taking</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- end row -->
+
+                <div class="row">
+                    <div class="col-sm-5">
+                        <div class="feat-description">
+                            <h4 class="text-muted">For best results, hold the phone in landscape mode about 10-12 inches away from your subject. A close up, in focus shot will provide the most accurate results. </h4>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-7">
+                        <img src="images/macbook.png" alt="img" class="img-responsive">
+                    </div>
+
+                </div><!-- end row -->
+
+            </div> <!-- end container -->
+        </section>
+        <!-- end features alt -->
+
+        <!-- FOOTER -->
+        <footer class="section bg-gray footer">
+            <div class="container">
+                <div class="row">
+                  <div class="col-md-3 col-sm-6">
+                      <h5>Contact</h5>
+                      <address>
+                          Mehri Russo<br>
+                          Boulder, CO<br>
+                          <abbr title="Phone">P:</abbr> 303 875 1904<br/>
+                          E: <a href="mailto:#">mehrimova@gmail.com</a>
+                      </address>
+                  </div>
+
+
+                    <div class="col-md-3 col-sm-6">
+                        <h5>Tech</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="">Google Vision API</a></li>
+                            <li><a href="">Wikipedia API</a></li>
+                            <li><a href="">GitHub Repo</a></li>
+                        </ul>
+                    </div>
+                </div> <!-- end row -->
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="footer-alt text-center">
+                            <p class="text-muted m-b-0">2017 © Mehri Russo </p>
+                        </div>
+                    </div>
+                </div> <!-- end row -->
+
+            </div> <!-- end container -->
+        </footer>
+        <!-- END FOOTER -->
+
+
+        <!-- Back to top -->
+        <a href="#" class="back-to-top" id="back-to-top"> <i class="pe-7s-angle-up"> </i> </a>
+
+
+        <script
+        src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <!-- Jquery easing -->
+        <script type="text/javascript" src="js/jquery.easing.1.3.min.js"></script>
+        <!--sticky header-->
+        <script type="text/javascript" src="js/jquery.sticky.js"></script>
+        <!--common script for all pages-->
+        <script src="js/jquery.app.js"></script>
+
+        <script type="text/javascript" src="js/app.js"></script>
+
+    </body>
+</html>
