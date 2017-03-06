@@ -2,36 +2,31 @@
 
 var IMG_URL = "https://vision.googleapis.com/v1/images:annotate?key=AIzaSyABVZ-jyFG1avZQJBfz25FLWjqR2wukH08";
 
-// var WIKI_QUERY = "http://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page=Aquilegia_caerulea&callback=?";
-
-// colorado blue columbine
-// var plantName = "Aquilegia_caerulea"
-// hedgehog cactus
-// var plantName = "Echinocereus_engelmannii"
-
-// var description
 var canvas
 var ctx
-
-// var WIKI_QUERY = "https://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page="+encodeURIComponent(description)+"&callback=?";
-// console.log("Can I find you? ", description);
-
-// var plantName = "gerbera"
-//
-// var WIKI_QUERY = "https://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page="+plantName+"&callback=?";
-
-// var WIKI_QUERY = "https://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page=gerbera&callback=?";
-
 
 $(document).ready(function() {
 
   canvas = document.querySelector('#canvas')
   ctx = canvas.getContext('2d')
 
+  $("#result-main").hide();
+
   $('#fileform').on('submit', uploadFiles);
 });
 
-//Upload photo button
+  $("#identify-btn").click(showResults);
+
+  function showResults() {
+    $("#result-main").show();
+  }
+
+  function hideResults() {
+    $("#result-main").hide();
+  }
+
+
+// Upload photo button
 document.getElementById('upload-photo').onclick = function(){
     document.getElementById('upload-field').click();
 };
@@ -75,8 +70,6 @@ function drawImage(content) {
 // Sends the image to the Cloud Vision API and outputs the results.
 function sendFileToCloudVision(content) {
 
-  // var type = $("#fileform [name=type]").val();
-
   // Strip out the file prefix when you convert to json.
   var request = {
     requests: [{
@@ -108,10 +101,10 @@ function displayJSON(data) {
 
   var contents = JSON.stringify(data, null, 4);
 
-  var description = [data.responses[0].labelAnnotations[0].description,   data.responses[0].labelAnnotations[1].description ,  data.responses[0].labelAnnotations[2].description].filter(onlyName);
+  var description = [data.responses[0].labelAnnotations[0].description,   data.responses[0].labelAnnotations[1].description,  data.responses[0].labelAnnotations[2].description].filter(onlyName);
 
   function onlyName(description) {
-    return description !== "plant" && description !== "flower"  && description !== "cactus" && description !== "close up";
+    return description !== "plant" && description !== "flower"  && description !== "cactus" && description !== "close up" && description !== "flora" && description !== "Macro Photography";
   }
 
 $("#results").text(description);
