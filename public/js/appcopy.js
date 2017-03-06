@@ -16,9 +16,9 @@ var ctx
 // var WIKI_QUERY = "https://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page="+encodeURIComponent(description)+"&callback=?";
 // console.log("Can I find you? ", description);
 
-// var plantName = "gerbera"
-//
-// var WIKI_QUERY = "https://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page="+plantName+"&callback=?";
+var plantName = "gerbera"
+
+var WIKI_QUERY = "https://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page="+plantName+"&callback=?";
 
 // var WIKI_QUERY = "https://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page=gerbera&callback=?";
 
@@ -101,6 +101,33 @@ function sendFileToCloudVision(content) {
     $('#results').text('ERRORS: ' + textStatus + ' ' + errorThrown);
   }).done(displayJSON);
 
+//inside a done function
+  //Wikipedia Link 1
+  $.ajax({
+        type: "GET",
+        url: WIKI_QUERY,
+        contentType: "application/json; charset=utf-8",
+        async: false,
+        dataType: "json",
+        success: function (data, textStatus, jqXHR) {
+
+            var markup = data.parse.text["*"];
+            var blurb = $('<div></div>').html(markup);
+
+            // remove links as they will not work
+            blurb.find('a').each(function() { $(this).replaceWith($(this).html()); });
+
+            // remove any references
+            blurb.find('sup').remove();
+
+            // remove cite error
+            blurb.find('.mw-ext-cite-error').remove();
+            $('#article').html($(blurb).find('p'));
+
+        },
+        error: function (errorMessage) {
+        }
+    });
 
 }
 
@@ -128,37 +155,8 @@ function displayJSON(data) {
 
 $("#results").text(description);
 
-  var wikiSearch = encodeURIComponent(description);
-  console.log(encodeURIComponent(description));
-
-  //Wikipedia Link 1
-  $.ajax({
-        type: "GET",
-        url: "https://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page="+wikiSearch+"&callback=?",
-        contentType: "application/json; charset=utf-8",
-        async: false,
-        dataType: "json",
-        success: function (data, textStatus, jqXHR) {
-
-            var markup = data.parse.text["*"];
-            var blurb = $('<div></div>').html(markup);
-
-            // remove links as they will not work
-            blurb.find('a').each(function() { $(this).replaceWith($(this).html()); });
-
-            // remove any references
-            blurb.find('sup').remove();
-
-            // remove cite error
-            blurb.find('.mw-ext-cite-error').remove();
-            $('#article').html($(blurb).find('p'));
-
-        },
-        error: function (errorMessage) {
-        }
-    });
-
 console.log("The name is: ", description);
+console.log(encodeURIComponent(description));
 
 
 }
