@@ -104,13 +104,13 @@ function displayJSON(data) {
   var description = [data.responses[0].labelAnnotations[0].description,   data.responses[0].labelAnnotations[1].description,  data.responses[0].labelAnnotations[2].description].filter(onlyName);
 
   function onlyName(description) {
-    return description !== "plant" && description !== "flower"  && description !== "cactus" && description !== "close up" && description !== "flora" && description !== "Macro Photography";
+    return description !== "plant" && description !== "flower" && description !== "land plant" && description !== "close up" && description !== "flora" && description !== "Macro Photography";
   }
-
-$("#results").text(description);
+var descriptionName = description[0].toUpperCase();
+$("#results").text(descriptionName);
 
   var wikiSearch = encodeURIComponent(description)
-  console.log(encodeURIComponent(description));
+  // console.log(encodeURIComponent(description));
 
   //Wikipedia Search
   $.ajax({
