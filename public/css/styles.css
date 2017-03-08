@@ -31,6 +31,24 @@
 
 -------------------------------------------------------------------*/
 
+.back-to-top:hover,.bg-custom,.btn-custom,.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover,
+.navbar-custom  {
+  background-color: #7DB171!important;
+}
+
+.btn-white-fill,.text-custom,.btn-white-bordered:hover,.btn-custom:hover,.features-box i,
+.pricing-column .plan-title {
+  color: #7DB171 !important;
+}
+
+.btn-custom {
+  border: 2px solid #7DB171 !important;
+}
+
+.intro-form input:focus {
+  border: 1px solid #01bf86;
+}
+
 
 /*======= 1.Reset ======== */
 #upload-wrap {
@@ -447,6 +465,11 @@ iframe {
 }
 
 /* ==== 7. FEATURES ==== */
+
+.flower-name {
+  font-weight: 300;
+  font-size: 28px
+}
 
 .feat-description p {
   margin-top: 20px;

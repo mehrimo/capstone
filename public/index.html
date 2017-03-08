@@ -93,8 +93,8 @@
                                 <div class="home-wrapper home-wrapper-alt">
                                   <form id="fileform" action="">
                                     <h1 class="font-light">Identify flowers on the go</h1>
-                                    <h4>Flora Find helps you identify different types of flowers. Just snap a picture with your phone.</h4>
-                                    <input class="btn btn-custom" value="Upload Photo" id="upload-photo" type="submit" name="submit">
+                                    <h4>Flora Find helps you identify different types of flowers. Snap a picture with your phone and upload. It's that easy.</h4>
+                                    <input class="btn btn-custom" value="Take Photo" id="upload-photo" type="submit" name="submit">
                                     <div id="upload-wrap">
                                       <input type="file" accept="image/*" capture="camera" id="upload-field" name="fileField"/>
                                       </div>
@@ -138,7 +138,7 @@
                 <div class="row">
                     <div class="col-sm-5">
                         <div class="feat-description">
-                            <h3 id="results" class="text-muted"></h3>
+                            <h3 id="results" class="flower-name text-muted"></h3>
                             <p id="article"></p>
                         </div>
                     </div>
@@ -168,7 +168,7 @@
                 <div class="row">
                     <div class="col-sm-5">
                         <div class="feat-description">
-                            <h4 class="text-muted">For best results, hold the phone in landscape mode about 10-12 inches away from a single flower. A close-up, in focus shot will provide the most accurate results. </h4>
+                            <h4 class="text-muted">For best results, hold the phone in landscape mode a few inches away from the  flower. A close-up, well-lit, in focus shot will be best.</h4>
                         </div>
                     </div>
 
@@ -198,7 +198,7 @@
 
 
                     <div class="col-md-3 col-sm-6">
-                        <h5>Tech</h5>
+                        <a href="" data-toggle="modal" data-target="#tech"><h5>Tech</h5></a>
                         <ul class="list-unstyled">
                             <li><a href="">Google Vision API</a></li>
                             <li><a href="">Wikipedia API</a></li>
@@ -222,6 +222,53 @@
 
         <!-- Back to top -->
         <a href="#" class="back-to-top" id="back-to-top"> <i class="pe-7s-angle-up"> </i> </a>
+
+        <!-- Modal -->
+        <div class="modal fade" id="tech" tabindex="-1" role="dialog" aria-labelledby="techLabel" aria-hidden="true">
+            <div class="modal-dialog modal-custom">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="jobdetailLabel"></h4>
+                    </div>
+                    <div class="modal-body">
+                        <div>
+                            <div>
+                              <h5><strong>Technologies:</strong></h5>
+                              <p></p>
+
+                              <ul>
+                                <li>HTML5</li>
+                                <li>CSS3</li>
+                                <li>Boostrap</li>
+                                <li>JavaScript</li>
+                                <li>jQuery</li>
+                                <li>Google Vision API</li>
+                                <li>Wikipedia API</li>
+                              </ul>
+
+                                <h5><strong>Contact:</strong></h5>
+                                <p></p>
+
+                                <ul>
+                                  <li>
+                                     mehrirusso.com
+                                  </li>
+                                  <li>
+                                    mehrimova@gmail.com
+                                  </li>
+                                </ul>
+
+                                <p></p>
+
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+           </div>
+        <!-- end Modal -->
+
 
 
         <script
