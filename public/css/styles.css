@@ -31,6 +31,7 @@
 
 -------------------------------------------------------------------*/
 
+
 .back-to-top:hover,.bg-custom,.btn-custom,.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover,
 .navbar-custom  {
   background-color: #7DB171!important;
@@ -376,7 +377,8 @@ a:hover,a:focus,.a:active {
 }
 
 .logo {
-  font-weight: 500;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 400;
   font-size: 22px;
   color: #ffffff !important;
   letter-spacing: 1px;
@@ -404,6 +406,7 @@ a:hover,a:focus,.a:active {
 .sticky-wrapper.is-sticky .navbar-custom {
 	padding: 10px 0px !important;
 }
+
 
 
 
