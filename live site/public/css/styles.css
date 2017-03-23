@@ -23,7 +23,11 @@
 13. Responsive
 
 -------------------------------------------------------------------*/
-
+h5 {
+  font-weight: 300;
+  line-height: 22px;
+  padding-bottom: 10px
+}
 
 .back-to-top:hover,.bg-custom,.btn-custom,.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover,
 .navbar-custom  {
