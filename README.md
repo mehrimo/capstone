@@ -1,35 +1,28 @@
-# capstone
+# Flora Find
 
-# Proposal
+Flora Find is a flower identification tool built for mobile. It identifies flowers using image recognition and pulls in information from Wikipedia. 
 
-For my capstone, I would like to create a Plant Finder App.
+It’s easy: 
 
-### Functionality:
+1. Snap a photo with your phone
+2. Upload it or choose one from your photo library
+3. View your results
 
-Allows the user to take a photo on their mobile phone and upload it to the webpage. The API will use photo recognition to identify the flower or plant. It will provide details such as: name, is it poisonous?, etc.
+Current deployed version is here: http://flora-find.com/public/landingpage.html
 
-### Technologies:
 
-[Google Vision API](https://cloud.google.com/vision/)
 
-AngularJS 1.6
+![alt text](https://github.com/mehrimo/capstone/blob/master/app/public/images/phone-mockups.png?raw=true)
 
-Bootstrap
+### Features
 
-PostgreSQL
+1. The **main page** allows a user to upload a picture of a flower to identify one of two way:
+   1.  Take the photo using their phone's camera
+   2. Upload a photo from their phone's library
+2. The user will click identify to display the **results**. These results will display the name and general information of the flower.
 
-Express
+### Technologies Used
 
-### Unfamiliar Enviroment:
-
-Accessing the phone's hardware for camera access and uploads
-
-Google Vision API
-
-### Stretch Goals:
-
-Use React Native to build a native mobile app
-
-Additional functionality for the user: save the photo to thier photo library, include GPS location, meta data
-
-Deploy on domain "flora-find.com"
+1. **Google Vision API:** Uses image recognition to identify the flower image.
+2. **Wikipedia API:** Pulls in the wikipedia information based on the flower name.
+3. Additional technologies include: **Bootstrap, JavaScript, JSON** and **phone hardware**. 
