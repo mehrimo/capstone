@@ -10,9 +10,9 @@ It’s easy: 
 
 Current deployed version is here: http://flora-find.com/public/landingpage.html
 
+![phone-mockups](public/images/phone-mockups.png)
 
-
-![alt text](https://github.com/mehrimo/capstone/blob/master/app/public/images/phone-mockups.png?raw=true)
+![alt text](https://github.com/mehrimo/capstone/blob/master/public/images/phone-mockups.png)
 
 ### Features
 
