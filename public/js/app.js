@@ -11,7 +11,6 @@ $(document).ready(function() {
   ctx = canvas.getContext('2d')
 
   $("#result-main").hide();
-
   $('#fileform').on('submit', uploadFiles);
 });
 
@@ -31,8 +30,7 @@ document.getElementById('upload-photo').onclick = function(){
     document.getElementById('upload-field').click();
 };
 
-  // 'submit' event handler - reads the image bytes and sends it to the Cloud
-  // Vision API.
+  // Submit event handler - reads the image bytes and sends it to the Cloud Vision API.
 function uploadFiles(event) {
   event.preventDefault(); // Prevent the default form post
 
@@ -110,7 +108,6 @@ var descriptionName = description[0].toUpperCase();
 $("#results").text(descriptionName);
 
   var wikiSearch = encodeURIComponent(description)
-  // console.log(encodeURIComponent(description));
 
   //Wikipedia Search
   $.ajax({
