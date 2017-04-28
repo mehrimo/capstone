@@ -120,15 +120,6 @@ a:hover,a:focus,.a:active {
   border-bottom: 1px solid #ded9ce;
 }
 
-.p-0 {
-  padding: 0px !important;
-}
-
-.w-full {
-  width: 100% !important;
-}
-
-
 .bg-img-1 {
   background: url("../images/upfeathers.png") repeat;
 }

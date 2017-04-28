@@ -136,7 +136,4 @@ $("#results").text(descriptionName);
         }
     });
 
-console.log("The name is: ", description);
-
-
 }
