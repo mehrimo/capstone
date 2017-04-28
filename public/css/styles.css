@@ -1,261 +1,5 @@
-.disclaimer {
-  font-weight: 300;
-  line-height: 22px;
-  padding-top: 10px
-}
 
-.back-to-top:hover,.bg-custom,.btn-custom,.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover,
-.navbar-custom  {
-  background-color: #7DB171!important;
-}
-
-.btn-white-fill,.text-custom,.btn-white-bordered:hover,.btn-custom:hover,.features-box i,
-.pricing-column .plan-title {
-  color: #7DB171 !important;
-}
-
-.btn-custom {
-  border: 2px solid #7DB171 !important;
-}
-
-.intro-form input:focus {
-  border: 1px solid #01bf86;
-}
-
-
-/*======= 1.Reset ======== */
-#upload-wrap {
-  opacity:0;
-  height:0px;
-  width:0px
-}
-
-#identify-btn {
-  margin-top: 10px;
-}
-
-body {
-  font-family: 'Roboto', sans-serif;
-  color: #524646;
-  background: #fff;
-  font-size: 14px;
-  line-height: 22px;
-  overflow-x:hidden;
-}
-
-::selection{
-  background: rgba(249, 230, 5, 0.5);
-  color: #496174;
-}
-
-::-moz-selection {
-  background: rgba(249, 230, 5, 0.5);
-  color: #496174;
-}
-
-a:hover,a:focus,.a:active {
-  text-decoration: none;
-  outline: none !important;
-}
-
-/* Back to top */
-.back-to-top {
-  width: 30px;
-  height: 30px;
-  position: fixed;
-  bottom: 10px;
-  right: 20px;
-  display: none;
-  text-align: center;
-  z-index: 10000;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  background-color: #496174;
-}
-
-.back-to-top i {
-  color: #fff;
-  font-size: 22px;
-  display: block;
-  line-height: 30px;
-}
-
-
-/*======= 2.Helper classes ======== */
-.section {
-  padding-top: 100px;
-  padding-bottom: 80px;
-}
-
-.sub-title {
-  margin-bottom: 40px;
-  font-size: 15px;
-}
-
-.title {
-  font-size: 22px;
-  margin-top: 0;
-}
-
-.text-white {
-  color: #ffffff !important;
-}
-
-.text-muted {
-  color: #716767;
-}
-
-.text-light {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.font-light {
-  font-weight: 300;
-}
-
-.bg-light {
-  background-color: #f8f4ec;
-  border-top: 1px solid #ded9ce;
-  border-bottom: 1px solid #ded9ce;
-}
-
-.bg-img-1 {
-  background: url("../images/upfeathers.png") repeat;
-}
-
-/*======= 3.Buttons ======= */
-.btn {
-  border-radius: 2px;
-  padding: 8px 16px;
-  outline: none !important;
-  box-shadow: none !important;
-}
-
-.btn-sm {
-  padding: 5px 10px !important;
-}
-
-.btn-white-fill {
-  padding: 8px 24px !important;
-  background-color: #ffffff;
-  border: 2px solid rgba(255, 255, 255, 0.75) !important;
-  border-radius: 50px;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-}
-
-.btn-white-fill:hover {
-  border: 2px solid rgba(255, 255, 255, 0.75) !important;
-  background-color: transparent;
-  color: #ffffff !important;
-}
-
-.btn-white-bordered {
-  padding: 8px 24px !important;
-  background-color: transparent !important;
-  border: 2px solid rgba(255, 255, 255, 0.75) !important;
-  color: #ffffff;
-  border-radius: 50px;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-}
-
-.btn-white-bordered:hover {
-  background-color: #ffffff !important;
-}
-
-.btn-custom {
-  padding: 8px 24px !important;
-  color: #ffffff !important;
-  border-radius: 50px;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-}
-
-.btn-custom:hover {
-  background-color: transparent !important;
-}
-
-.video-btn {
-  color: #ffffff !important;
-  letter-spacing: 1px;
-  outline: none !important;
-}
-
-.video-btn i {
-  margin-right: 7px;
-  width: 20px;
-  height: 20px;
-  border: 2px solid #fff;
-  border-radius: 50%;
-  line-height: 17px;
-  vertical-align: middle;
-  text-align: center;
-  font-size: 12px;
-  padding-left: 3px;
-  margin-left: -12px;
-}
-
-/*======= 4.Dropdown ======= */
-.dropdown-menu {
-  box-shadow: none;
-  padding: 4px;
-  border-radius: 4px !important;
-  -webkit-animation: dropdownOpen 0.3s ease-out;
-  -o-animation: dropdownOpen 0.3s ease-out;
-  animation: dropdownOpen 0.3s ease-out;
-  border: 2px solid #eee;
-}
-
-.dropdown-menu > li > a {
-  padding: 6px 20px;
-  font-size: 15px !important;
-  color: #496174 !important;
-}
-
-.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
-  color: #ffffff !important;
-}
-
-@-webkit-keyframes dropdownOpen {
-  0% {
-    -webkit-transform: scale(0);
-    -ms-transform: scale(0);
-    -o-transform: scale(0);
-    transform: scale(0);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-@keyframes dropdownOpen {
-  0% {
-    -webkit-transform: scale(0);
-    -ms-transform: scale(0);
-    -o-transform: scale(0);
-    transform: scale(0);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-
-/*===== 5. Navbar Custom ======*/
+/*===== Navbar ======*/
 
 .navbar-custom {
   width: 100%;
@@ -285,8 +29,8 @@ a:hover,a:focus,.a:active {
 }
 
 .navbar-btn-alt {
-  padding: 5px 20px !important;
-  text-transform: none !important;
+  padding: 5px 20px
+  text-transform: none
   font-weight: 400;
   margin-top: 8px !important;
 }
@@ -322,10 +66,7 @@ a:hover,a:focus,.a:active {
 	padding: 10px 0px !important;
 }
 
-
-
-
-/*======= 6. Home =======*/
+/*======= Home =======*/
 
 .home-fullscreen {
   height: 100%;
@@ -367,22 +108,31 @@ a:hover,a:focus,.a:active {
   width: 100%;
 }
 
-.or-space {
-  margin: 0 20px;
+#upload-wrap {
+  opacity:0;
+  height:0px;
+  width:0px
 }
 
-iframe {
-  max-width: 100%;
+#identify-btn {
+  margin-top: 10px;
 }
 
-.frame-border {
-  border: 9px solid rgba(0, 0, 0, 0.3);
-  webkit-border-radius: 5px 5px 5px 5px;
-  -moz-border-radius: 5px 5px 5px 5px;
-  border-radius: 5px 5px 5px 5px;
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #524646;
+  background: #fff;
+  font-size: 14px;
+  line-height: 22px;
+  overflow-x:hidden;
 }
 
-/* ==== 7. FEATURES ==== */
+a:hover,a:focus,.a:active {
+  text-decoration: none;
+  outline: none !important;
+}
+
+/* ==== FEATURE ==== */
 
 .flower-name {
   font-weight: 300;
@@ -419,47 +169,129 @@ iframe {
   font-size: 48px;
 }
 
-
-/* == 12. Other pages CSS === */
-
-.header-title-box {
-  padding-top: 190px;
-  padding-bottom: 155px
+.back-to-top:hover,.bg-custom,.btn-custom,.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover,
+.navbar-custom  {
+  background-color: #7DB171!important;
 }
 
-.header-title-box h3 {
-  font-size: 30px;
+.btn-white-fill,.text-custom,.btn-white-bordered:hover,.btn-custom:hover,.features-box i,
+.pricing-column .plan-title {
+  color: #7DB171 !important;
+}
+
+.btn-custom {
+  border: 2px solid #7DB171 !important;
+}
+
+/* Back to top */
+.back-to-top {
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  display: none;
+  text-align: center;
+  z-index: 10000;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #496174;
+}
+
+.back-to-top i {
+  color: #fff;
+  font-size: 22px;
+  display: block;
+  line-height: 30px;
+}
+
+
+/*======= Helper classes ======== */
+.section {
+  padding-top: 100px;
+  padding-bottom: 80px;
+}
+
+.sub-title {
+  margin-bottom: 40px;
+  font-size: 15px;
+}
+
+.title {
+  font-size: 22px;
+  margin-top: 0;
+}
+
+.text-white {
+  color: #ffffff !important;
+}
+
+.text-muted {
+  color: #716767;
+}
+
+.text-light {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.font-light {
   font-weight: 300;
 }
 
-.title-about h3 {
-  margin-bottom: 30px;
+.bg-light {
+  background-color: #f8f4ec;
+  border-top: 1px solid #ded9ce;
+  border-bottom: 1px solid #ded9ce;
 }
 
-.wide-img-showcase-row {
-  position: relative;
+.bg-img-1 {
+  background: url("../images/upfeathers.png") repeat;
 }
 
-.no-padding.img {
-  background: url(../images/showcase-1.jpg) scroll center no-repeat;
-  background-size: cover;
-  position: absolute;
-  height: 100%;
+/*======= Buttons ======= */
+.btn {
+  border-radius: 2px;
+  padding: 8px 16px;
+  outline: none !important;
+  box-shadow: none !important;
 }
 
-.no-padding.img-2 {
-  background: url(../images/showcase-2.jpg) scroll center no-repeat;
-  background-size: cover;
-  position: absolute;
-  height: 100%;
+.btn-sm {
+  padding: 5px 10px !important;
 }
 
-.about-detail-img-box {
-  padding: 15% 0;
+.btn-white-fill {
+  padding: 8px 24px !important;
+  background-color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.75) !important;
+  border-radius: 50px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.btn-white-fill:hover {
+  border: 2px solid rgba(255, 255, 255, 0.75) !important;
+  background-color: transparent;
+  color: #ffffff !important;
 }
 
 
-/*======= 13. Responsive ======*/
+.btn-custom {
+  padding: 8px 24px !important;
+  color: #ffffff !important;
+  border-radius: 50px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.btn-custom:hover {
+  background-color: transparent !important;
+}
+
+/*======= Responsive ======*/
 @media (min-width: 768px) {
   .nav-custom-left {
     margin-left: 5%;
@@ -468,21 +300,7 @@ iframe {
     padding-top: 10px;
     padding-bottom: 10px;
   }
-}
-
-@media (max-width: 767px) {
-  .no-padding.img,.no-padding.img-2 {
-    position: relative;
-    height: 300px;
-  }
-  .video-wrapper {
-    padding-top: 50px;
-  }
-  .intro-form {
-    margin-top: 50px;
-  }
   .feat-description {
     margin-bottom: 50px;
     text-align: center;
-  }
 }
