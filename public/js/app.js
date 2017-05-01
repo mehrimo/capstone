@@ -63,8 +63,6 @@ function drawImage(content) {
   image.src = content;
 }
 
-
-
 // Sends the image to the Cloud Vision API and outputs the results.
 function sendFileToCloudVision(content) {
 
