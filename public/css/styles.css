@@ -1,8 +1,3 @@
-disclaimer {
-  font-weight: 300;
-  line-height: 22px;
-  padding-top: 10px
-}
 
 .back-to-top:hover,.bg-custom,.btn-custom,.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover,
 .navbar-custom  {
@@ -23,7 +18,7 @@ disclaimer {
 }
 
 
-/*======= Reset ======== */
+/*======= 1.Reset ======== */
 #upload-wrap {
   opacity:0;
   height:0px;
@@ -148,7 +143,7 @@ a:hover,a:focus,.a:active {
   background-size: cover;
 }
 
-/*======= Buttons ======= */
+/*======= 3.Buttons ======= */
 .btn {
   border-radius: 2px;
   padding: 8px 16px;
@@ -201,9 +196,8 @@ a:hover,a:focus,.a:active {
 }
 
 .btn-custom:hover {
-  background-color: transparent !important;
+  background-color: white !important;
 }
-
 
 
 /*======= Navbar =======*/
@@ -273,7 +267,6 @@ a:hover,a:focus,.a:active {
 }
 
 
-
 /*======= Home =======*/
 .home-fullscreen {
   height: 100%;
@@ -320,8 +313,8 @@ a:hover,a:focus,.a:active {
 }
 
 
-
 /* ==== FEATURES ==== */
+
 .flower-name {
   font-weight: 300;
   font-size: 28px
@@ -358,6 +351,45 @@ a:hover,a:focus,.a:active {
 }
 
 
+/*======= Footer =======*/
+
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #2f3e47;
+}
+
+.footer h5{
+  color: #ffffff;
+  font-size: 15px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.footer a{
+  color: rgba(255, 255, 255, 0.4);;
+}
+
+.footer a:hover{
+  color: rgba(255, 255, 255, 0.6);;
+}
+
+.footer ul li {
+  margin: 5px 0px;
+}
+
+.footer-alt {
+  margin-top: 30px;
+  padding-top: 20px;
+}
+
+.footer address {
+  color: rgba(255, 255, 255, 0.4);
+  line-height: 24px;
+  font-size: 13px;
+}
+
 
 /*======= Responsive ======*/
 @media (min-width: 768px) {
@@ -374,6 +406,12 @@ a:hover,a:focus,.a:active {
   .no-padding.img,.no-padding.img-2 {
     position: relative;
     height: 300px;
+  }
+  .video-wrapper {
+    padding-top: 50px;
+  }
+  .intro-form {
+    margin-top: 50px;
   }
   .feat-description {
     margin-bottom: 50px;
