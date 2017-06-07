@@ -4,7 +4,7 @@ Flora Find is a flower identification tool built for mobile. It identifies flowe
 
 It’s easy: 
 
-1. Snap a photo with your phone
+1. Snap a photo with your phone (or [download this Hibiscus flower](http://www.imraw.me/uploads/7/1/1/6/7116546/4155786_orig.jpg) to your desktop)
 2. Upload it or choose one from your photo library
 3. View your results
 
@@ -16,7 +16,7 @@ Current deployed version is here: http://flora-find.com/public/landingpage.html
 
 1. The **main page** allows a user to upload a picture of a flower to identify one of two way:
    1.  Take the photo using their phone's camera
-   2. Upload a photo from their phone's library
+   2.  Upload a photo from their phone's library
 2. The user will click identify to display the **results**. These results will display the name and general information of the flower.
 
 ### Technologies Used
