@@ -14,7 +14,7 @@ $(document).ready(function() {
   $('#fileform').on('submit', uploadFiles);
 });
 
-  $("#identify-btn").click(showResults);
+  // $("#identify-btn")
 
   function showResults() {
     $("#result-main").show();
@@ -100,37 +100,59 @@ function displayJSON(data) {
   var description = [data.responses[0].labelAnnotations[0].description,   data.responses[0].labelAnnotations[1].description,  data.responses[0].labelAnnotations[2].description].filter(onlyName);
 
   function onlyName(description) {
-    return description !== "plant" && description !== "flower" && description !== "land plant" && description !== "close up" && description !== "flora" && description !== "Macro Photography" && description !== "blue" && description !== "yellow" && description !== "pink" && description !== "red";
+  	const desc = description.toUpperCase()
+    return desc.length > 7 && desc !== "PLANT" && desc !== "FLOWER" && desc !== "LAND PLANT" && desc !== "CLOSE UP" && desc !== "FLORA" && desc !== "MACRO PHOTOGRAPHY" && desc !== "BLUE" && desc !== "YELLOW" && desc !== "PINK" && desc !== "RED";
   }
-var descriptionName = description[0].toUpperCase();
-$("#results").text(descriptionName);
 
-  var wikiSearch = encodeURIComponent(description)
+  var wikiSearch = description.filter(onlyName)[0]
 
-  //Wikipedia Search
+  if (!wikiSearch) {
+  	return $('#results').text('NO RESULTS');
+  }
+
   $.ajax({
-        type: "GET",
-        url: "http://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page="+wikiSearch+"&callback=?",
-        contentType: "application/json; charset=utf-8",
-        dataType: "json",
-        success: function (data, textStatus, jqXHR) {
+  	type: 'GET',
+  	url: 'https://en.wikipedia.org/w/api.php?action=opensearch&origin=*&search='+wikiSearch+'&redirects=resolve',
+  	contentType: 'application/json; charset=utf-8',
+  	dataType: 'json',
+  	success: function (data, textStatus, jqXHR) {
+  		console.log('some data for ya, ', data)
+  		const [,[title]] = data
 
-            var markup = data.parse.text["*"];
-            var blurb = $('<div></div>').html(markup);
+  		$("#results").text(title);
 
-            // remove links as they will not work
-            blurb.find('a').each(function() { $(this).replaceWith($(this).html()); });
+  		//Wikipedia Search
+		  $.ajax({
+		        type: "GET",
+		        url: "http://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&redirects&page="+title+"&callback=?",
+		        contentType: "application/json; charset=utf-8",
+		        dataType: "json",
+		        success: function (data, textStatus, jqXHR) {
+		        	console.log('wiki response', data)
+		            var markup = data.parse.text["*"];
+		            var blurb = $('<div></div>').html(markup);
 
-            // remove any references
-            blurb.find('sup').remove();
+		            // remove links as they will not work
+		            blurb.find('a').each(function() { $(this).replaceWith($(this).html()); });
 
-            // remove cite error
-            blurb.find('.mw-ext-cite-error').remove();
-            $('#article').html($(blurb).find('p'));
+		            // remove any references
+		            blurb.find('sup').remove();
 
-        },
-        error: function (errorMessage) {
-        }
-    });
+		            // remove cite error
+		            blurb.find('.mw-ext-cite-error').remove();
+		            $('#article').html($(blurb).find('p'));
+
+		            showResults();
+		            window.scrollTo(0, document.querySelector('#scroll-to-container').getBoundingClientRect().top)
+
+		        },
+		        error: function (errorMessage) {
+		        }
+		    });
+  	},
+  	error: function (errorMessage) {
+
+  	}
+  })
 
 }
